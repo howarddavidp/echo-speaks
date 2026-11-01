@@ -1,28 +1,28 @@
 {
     "packageName": "Echo Speaks",
-    "author": "Anthony S.",
-    "version": "4.3.0.1",
+    "author": "Anthony S. / howarddavidp fork",
+    "version": "4.3.0.1-grokbot1",
     "minimumHEVersion": "2.2.4",
     "dateReleased": "2025-09-10",
     "documentationLink": "https://tonesto7.github.io/echo-speaks-docs",
     "communityLink": "https://community.hubitat.com/t/release-echo-speaks-v4/68843",
     "licenseFile": "",
-    "releaseNotes": "Please see Changelog at https://raw.githubusercontent.com/tonesto7/echo-speaks/master/CHANGELOG.md for recent changes.",
+    "releaseNotes": "howarddavidp fork v1.0.0: force HTTPS on Hubitat getAppEndpointUrl (auth redirect). Base 4.3.0.1.",
     "apps": [
         {
             "id": "4216cb09-591c-452d-9dc7-20f330de8624",
             "name": "Echo Speaks",
             "namespace": "tonesto7",
-            "location": "https://raw.githubusercontent.com/tonesto7/echo-speaks/master/apps/echo-speaks.groovy",
+            "location": "https://raw.githubusercontent.com/howarddavidp/echo-speaks/master/apps/echo-speaks.groovy",
             "required": true,
             "oauth": true,
-            "version": "4.3.0.1"
+            "version": "4.3.0.1-grokbot1"
         },
         {
             "id": "cd4762db-aa0b-4d32-98ca-06de955dbc33",
             "name": "Echo Speaks - Actions",
             "namespace": "tonesto7",
-            "location": "https://raw.githubusercontent.com/tonesto7/echo-speaks/master/apps/echo-speaks-actions.groovy",
+            "location": "https://raw.githubusercontent.com/howarddavidp/echo-speaks/master/apps/echo-speaks-actions.groovy",
             "required": true,
             "oauth": false,
             "version": "4.3.0.1"
@@ -31,7 +31,7 @@
             "id": "50ad91a0-eb51-4d6f-98d2-f1654221baa9",
             "name": "Echo Speaks - Zones",
             "namespace": "tonesto7",
-            "location": "https://raw.githubusercontent.com/tonesto7/echo-speaks/master/apps/echo-speaks-zones.groovy",
+            "location": "https://raw.githubusercontent.com/howarddavidp/echo-speaks/master/apps/echo-speaks-zones.groovy",
             "required": true,
             "oauth": false,
             "version": "4.3.0.1"
@@ -42,7 +42,7 @@
             "id": "f3aa1a73-d2d2-4620-b9e6-2eb32f847d45",
             "name": "Echo Speaks Device",
             "namespace": "tonesto7",
-            "location": "https://raw.githubusercontent.com/tonesto7/echo-speaks/master/drivers/echo-speaks-device.groovy",
+            "location": "https://raw.githubusercontent.com/howarddavidp/echo-speaks/master/drivers/echo-speaks-device.groovy",
             "required": true,
             "version": "4.3.0.1"
         },
@@ -50,7 +50,7 @@
             "id": "afac5950-3dc0-4109-95ec-79aa3c7ef208",
             "name": "Echo Speaks Zone Device",
             "namespace": "tonesto7",
-            "location": "https://raw.githubusercontent.com/tonesto7/echo-speaks/master/drivers/echo-speaks-zone-device.groovy",
+            "location": "https://raw.githubusercontent.com/howarddavidp/echo-speaks/master/drivers/echo-speaks-zone-device.groovy",
             "required": true,
             "version": "4.3.0.1"
         }
