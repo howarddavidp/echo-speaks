@@ -1,7 +1,7 @@
 {
     "packageName": "Echo Speaks",
     "author": "Anthony S. / howarddavidp fork",
-    "version": "4.3.0.1-grokbot1",
+    "version": "4.3.0.1-grokbot2",
     "minimumHEVersion": "2.2.4",
     "dateReleased": "2025-09-10",
     "documentationLink": "https://tonesto7.github.io/echo-speaks-docs",
@@ -16,7 +16,7 @@
             "location": "https://raw.githubusercontent.com/howarddavidp/echo-speaks/master/apps/echo-speaks.groovy",
             "required": true,
             "oauth": true,
-            "version": "4.3.0.1-grokbot1"
+            "version": "4.3.0.1-grokbot2"
         },
         {
             "id": "cd4762db-aa0b-4d32-98ca-06de955dbc33",
