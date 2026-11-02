@@ -5050,7 +5050,7 @@ static Boolean codeUpdIsAvail(String newVer, String curVer, String type) {
         if(newVer != curVer) {
             latestVer = versions?.max { a, b ->
                 List verA = a?.tokenize('.'); List verB = b?.tokenize('.'); Integer commonIndices = Math.min(verA?.size(), verB?.size())
-                for (Integer i = iZ; i < commonIndices; ++i) { if(verA[i]?.toInteger() != verB[i]?.toInteger()) { return verA[i]?.toInteger() <=> verB[i]?.toInteger() } }
+                for (Integer i = iZ; i < commonIndices; ++i) { Integer ai = verA[i]?.replaceAll("[^0-9].*", "")?.toInteger(); Integer bi = verB[i]?.replaceAll("[^0-9].*", "")?.toInteger(); if(ai != bi) { return ai <=> bi } }
                 verA?.size() <=> verB?.size()
             }
             result = (latestVer == newVer)
@@ -5067,7 +5067,7 @@ Boolean echoDevUpdAvail()       { return ((Map)state.appData?.versions && (Strin
 // Boolean socketUpdAvail()        { return ((Map)state.appData?.versions && (String)state.codeVersions?.wsDevice && codeUpdIsAvail((String)state.appData.versions?.wsDevice?.ver, (String)state.codeVersions.wsDevice, "socket")) }
 Boolean serverUpdAvail()        { return ((Map)state.appData?.versions && (String)state.codeVersions?.server && codeUpdIsAvail((String)state.appData.versions?.server?.ver, (String)state.codeVersions.server, "server")) }
 
-static Integer versionStr2Int(String str) { return str ? str.replaceAll("\\.", sBLANK)?.toInteger() : null }
+static Integer versionStr2Int(String str) { String c = str ? str.replaceAll("[^0-9.]", "").replaceAll("\\.", "") : null; return c?.isInteger() ? c.toInteger() : null }
 
 void checkVersionData(Boolean now = false) { //This reads a JSON file from GitHub with version numbers
     Integer lastUpd = getLastTsValSecs("lastAppDataUpdDt")
